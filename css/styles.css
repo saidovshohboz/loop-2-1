@@ -1,0 +1,176 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: "Roboto", "Arial" ,sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #e67c69;
+  overflow-x: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  bottom: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.container {
+  width: 100%;
+  max-width: 640px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* WASHING MODE */
+.washing-mode-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.washing-mode-item:not(:last-child) {
+  margin-right: 66px;
+}
+
+.washing-mode-link {
+  font-weight: bold;
+  font-size: 50px;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.washing-mode-link:hover {
+  opacity: 0.9;
+}
+
+.washing-mode-item-active .washing-mode-link {
+  color: #fff;
+  opacity: 1;
+}
+
+.washing-mode-notice {
+  max-width: 420px;
+  margin-top: 0;
+  font-size: 14px;
+}
+
+/* BUTTON */
+.washing-mode-info {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.button-prev {
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.button-next {
+  right: 0;
+  transform: translateX(100%);
+}
+
+.button-controller {
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  border: 0;
+  padding: 0;
+  background-color: #fff;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.button-controller:hover {
+  opacity: 1;
+}
+
+/* WASHING MODE INFO  */
+.washing-mode-status {
+  margin-top: 0;
+  display: flex;
+}
+
+.washing-mode-status-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  padding: 30px;
+}
+
+.washing-mode-status-item-timer {
+  background-color: #555;
+}
+
+.washing-mode-status-item-temprature {
+  background-color: #333;
+}
+
+.washing-mode-status-item-load {
+  background-color: #111;
+}
+
+
+.washing-mode-status-heading {
+  color: #ff907c;
+}
+
+.washing-mode-status-value {
+  margin-left: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.start-button {
+  position: absolute;
+  border: 0;
+  width: 180px;
+  border-radius: 5px;
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+  bottom: 0;
+  left: 10px;
+  transform: translateY(50%);
+  transition: transform 0.4s ease;
+}
+
+.start-button:hover {
+  transform: translateY(30%);
+}
